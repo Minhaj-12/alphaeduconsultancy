@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+
+
+  body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #0015ff;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+
+  header{
+
+    text-align: center;
+  }
+
+  h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+  }
+
+  input [type=radio]{
+    color: #ffffff;
+  }
+
+
+  label[for ="g"]{
+    color: #ffffff;
+  }
+
+  label[for ="m"]{
+    color: #ffffff;
+  }
+
+  label[for ="fname"] {
+    color: #ffffff;
+
+  }
+
+  .logo {
+    color: white;
+    font-size: 30px;
+  }
+  .logo span {
+    color: blue;
+  }
+
+  .menu-bar {
+    height: 80px;
+    background: darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem calc((100vw - 1300px) / 2);
+}
+  
+  .logo {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0 2rem;
+  }
+
+  .menu-bar ul {
+    list-style: none;
+    display: flex;
+  }
+
+  .menu-bar ul li {
+   width: 120px;
+   padding: 10px 30px;
+   text-align: center;
+   position: relative;
+  }
+
+  .menu-bar ul li a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .menu-bar ul li a:hover {
+    color: rgb(17, 0, 255);
+  } 
+  
+  .menu-bar ul li:hover > ul {
+    display: block;
+  }
+  
+  .menu-bar ul li:hover > ul > li {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .menu-bar ul li:hover > ul > li a {
+    font-size: 16px;
+  }
+  
+  /* Style the container/contact section */
+
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+
+
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #000000bd;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Create two columns that float next to eachother */
+  .container .column {
+    
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  body{
+    background-image: url(rpic.png);
+    margin: 0;
+  }
+}
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    body{
+      background-image: url(golden\ hour.jpg);
+    }
+
+    header{
+  width: auto;
+  background-color: #ffffff00;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+    }
+
+    h1{
+      
+        display: block;
+        font-size: 2em;
+        margin-block-start: 0.67em;
+        margin-block-end: 0.67em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+        unicode-bidi: isolate;
+      color: #000;
+    }
+
+    .container {
+      width: 95%;
+      height: auto;}
+
+    .logo {
+      color: rgb(0, 0, 0);
+      font-size: 30px;
+      position: relative;
+      top: -8px;
+    }
+    
+    .logo span {
+      color: blue;
+      font-size: 30px;
+      align-items: center;
+    }
+    
+    .feature img {
+      width: 50%;
+      height: 75%;
+      object-fit: cover;
+      box-shadow: 0px 0px 40px rgba(0, 26, 255, 0.666);
+    
+    }
+
+    .btn {
+      margin: 1px;
+      padding: 15px 40px;
+      border: none;
+      outline: none;
+      color: #FFF;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      left: 10px;
+      top: -10px;
+      border-radius: 12px;
+    }
+
+    .btn::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    .btn::before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #002aff, #FF7300, #FFFB00, #48FF00,
+        #00FFD5, #002BFF, #FF00C8, #FF0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 600%;
+      z-index: -1;
+      width: calc(100% + 4px);
+      height:  calc(100% + 4px);
+      filter: blur(8px);
+      animation: glowing 20s linear infinite;
+      transition: opacity .3s ease-in-out;
+      border-radius: 10px;
+      opacity: 0;
+    }
+
+    @keyframes glowing {
+      0% {background-position: 0 0;}
+      50% {background-position: 400% 0;}
+      100% {background-position: 0 0;}
+    }
+
+    .btn:hover::before {
+      opacity: 1;
+    }
+
+    .btn:active:after {
+      background: transparent;
+    }
+    
+    .btn:active {
+      color: #ff0000;
+      font-weight: bold;
+    }
+    
+    .menu-bar {
+      position: relative;
+      top: initial;
+      left: initial;
+      box-shadow: none;
+    }
+    
+    .menu-bar ul {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0);
+      flex-direction: row;
+      padding: 0;
+      z-index: 100;
+      opacity: 100;
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .menu-bar ul.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .menu-bar ul li {
+      width: 100%;
+      padding: 10px;
+    }
+    
+    .menu-bar ul li a {
+      font-size: 16px;
+      color: black;
+    }
+  }

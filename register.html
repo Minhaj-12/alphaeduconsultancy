@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>ADMISSION</title>
+    <style>
+     </style>
+</head>
+<body>
+
+  <section class="menu-bar">
+    <div class="logo">ALPHA</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="brochure.html">Colleges</i></a>
+      <li><a href="contact.html">Contact</a></li>
+    </section>
+
+    <header>
+    <h1>STUDENT REGISTRATION</h1>
+  </div>
+</header>
+          
+          
+
+        </div>
+        <div class="row">
+          
+          <div class="column" >
+            <div class="container">
+            <form id="gform" action="">
+              <label for="fname">Name </label>
+              <input type="text" id="fname" name="name" placeholder="Your name..">
+              
+              <label for="fname">Email</label>
+              <input type="text" id="lname" name="email" placeholder="Email address..">
+              
+              <label for="fname">Contact</label>
+              <input type="text" id="cnumber" name="contact number" placeholder="Contact number..">
+
+              <label for="fname">Gender</label><br>
+              <input class="radio" type="radio" name="gender" value="male" checked>
+              <label for="g">Male</label>
+              <input class="radio" type="radio" name="gender" value="female" checked>
+              <label for="g">Female</label>
+              <input class="radio" type="radio" name="gender" value="others" checked>
+              <label for="g">Others</label><br>
+              <br>
+
+              <label for="m">+2 Subject</label>
+              <select id="text" name="+2 Subject">
+                <option value="Science">Science</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Humanities">Humanities</option>
+              </select>
+              
+              <label for="m">City</label>
+              <select id="text" name="City">
+                <option value="Mangalore">Mangalore</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Coimbatore">Coimbatore</option>
+              </select>
+              
+              <label for="g">what would you like Choose? &#128513;</label>
+              <textarea id="subject" name="course" placeholder="Write something.." style="height:100px"></textarea>
+              
+              <button class="btn"> submit </button>
+            </form>
+          </div>
+      <script>
+        $("#gform").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbyZV1tzuzi14WO0U0Rxj-eletwx2ehv5zHhVsU5r4LurE1xdiRsOI8U_n1TZ4yuwKhl/exec",
+                data:$("#gform").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    window.location.url="google.com"
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+</body>
+</html>
